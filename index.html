@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header class="game__header">
+        <h1>Sudoku</h1>
+        <div class="difficulty" role="group" aria-label="Difficulty">
+          <button class="difficulty__btn is-active" data-difficulty="easy" type="button">Easy</button>
+          <button class="difficulty__btn" data-difficulty="medium" type="button">Medium</button>
+          <button class="difficulty__btn" data-difficulty="hard" type="button">Hard</button>
+        </div>
+      </header>
+
+      <section class="stats" aria-label="Game stats">
+        <div class="stat">
+          <span class="stat__name">Time</span>
+          <span class="stat__value" id="timer">00:00</span>
+        </div>
+        <div class="stat">
+          <span class="stat__name">Mistakes</span>
+          <span class="stat__value" id="mistakes">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat__name">Hints</span>
+          <span class="stat__value" id="hints">0</span>
+        </div>
+      </section>
+
+      <p class="status" id="status" aria-live="polite">Select a cell to start</p>
+
+      <div class="board" id="board" role="grid" aria-label="Sudoku board"></div>
+
+      <div class="keypad" id="keypad" role="group" aria-label="Number pad"></div>
+
+      <div class="actions">
+        <button class="action action--primary" id="newGame" type="button">New Game</button>
+        <button class="action" id="undo" type="button">Undo</button>
+        <button class="action" id="erase" type="button">Erase</button>
+        <button class="action" id="notes" type="button" aria-pressed="false">Notes: Off</button>
+        <button class="action" id="hint" type="button">Hint</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
